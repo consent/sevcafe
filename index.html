@@ -216,7 +216,15 @@
 
 </div>
 
+<audio id="bg-audio" src="audio/moon.flac" loop></audio>
+
 <script data-goatcounter="https://sev.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 <script src="https://raw.githubusercontent.com/adryd325/oneko.js/14bab15a755d0e35cd4ae19c931d96d306f99f42/oneko.js"></script>
+<script>
+    document.addEventListener('click', function startAudio() {
+        document.getElementById('bg-audio').play();
+        document.removeEventListener('click', startAudio);
+    }, { once: true });
+</script>
 </body>
 </html>
