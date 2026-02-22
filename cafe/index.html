@@ -222,7 +222,9 @@
 <script src="https://raw.githubusercontent.com/adryd325/oneko.js/14bab15a755d0e35cd4ae19c931d96d306f99f42/oneko.js"></script>
 <script>
     document.addEventListener('click', function startAudio() {
-        document.getElementById('bg-audio').play();
+        const audio = document.getElementById('bg-audio');
+        audio.volume = 0.4;
+        audio.play();
         document.removeEventListener('click', startAudio);
     }, { once: true });
 </script>
